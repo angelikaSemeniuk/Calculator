@@ -3,12 +3,12 @@ var arrayOfElements = []; // [1, "+", 1]
 var enteredNumber = ""; // 111
 var input = document.querySelector("input");
 
-function clickOnButton(number) {
+function handleNumberClick(number) {
     enteredNumber = enteredNumber + number;
     input.value += number;
 }
 
-function clickOnSign(sign) {
+function handleSignClick(sign) {
     if(enteredNumber) {
         arrayOfElements.push(+enteredNumber);
     }
@@ -66,10 +66,9 @@ function calculate() {
     console.log("arrayOfElements", arrayOfElements);
     arrayOfElements = [res];
     enteredNumber = "";
-
 }
 
-function clearCalculation() {
+function handleClearClick() {
     input.value = "";
     arrayOfElements = [];
 }

@@ -1,0 +1,43 @@
+
+.container {
+    display: inline-block;
+    background-color: honeydew;
+    border: 2px solid lightgray;
+    border-radius: 7px;
+
+}
+
+.container h4 {
+    margin: 0;
+    padding: auto;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.container input {
+    width: 88%;
+    padding: 5px;
+    margin: 10px;
+    border: 2px solid lightgray;
+    border-radius: 6px;
+}
+
+.container button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    width: 50px;
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.container button:hover {
+    background-color: lightgray;
+}
+
+.signs,
+.clear {
+    background-color: cadetblue;
+}
