@@ -2,10 +2,22 @@
 var arrayOfElements = []; // [1, "+", 1]
 var enteredNumber = ""; // 111
 var input = document.querySelector("input");
+var result = false;
+var firstNull = false;
 
 function handleNumberClick(number) {
     enteredNumber = enteredNumber + number;
-    input.value += number;
+    console.log("result", result);
+    if (result) {
+        input.value = "";
+        input.value += number;
+        result = false;
+        arrayOfElements = [];
+    } else if (number == 0 && input.value == "0"){
+        input.value = "";
+    } else {
+        input.value += number;
+    }
 }
 
 function handleSignClick(sign) {
@@ -18,6 +30,9 @@ function handleSignClick(sign) {
     } else if (arrayOfElements[arrayOfElements.length-1] !== sign) {
         arrayOfElements[arrayOfElements.length-1] = sign;
         input.value += sign;
+    }
+    if (result) {
+        result = false;
     }
     enteredNumber = "";
 }
@@ -62,6 +77,7 @@ function calculate() {
         }
     }
     input.value = res;
+    result = true;
     console.log("res", res);
     console.log("arrayOfElements", arrayOfElements);
     arrayOfElements = [res];
